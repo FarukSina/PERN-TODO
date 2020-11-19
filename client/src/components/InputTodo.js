@@ -3,11 +3,9 @@ import React,{Fragment,useEffect, useState} from 'react'
 export default function InputTodo() {
 
     const [description, setDescription] = useState("")
-    // useEffect(() => {
-
-    // }, [])
+ 
     const onChange = (e)=>{
-        const { value, name } = e.target
+        const { value} = e.target
         setDescription(value)
     }
     console.log("description", description)
@@ -30,7 +28,7 @@ export default function InputTodo() {
         <Fragment>
             <h1 className="text-center mt-5">Pern Todo List</h1>
             <form onSubmit={onSubmit} className="d-flex mt-5">
-                <input type="text" name="description" value={description} className="form-control" onChange={onChange}/>
+                <input type="text" placeholder="Enter a TODO" name="description" value={description} className="form-control" onChange={onChange}/>
                 <button className="btn btn-success">Add</button>
             </form>
         </Fragment>

@@ -46,11 +46,10 @@ export default function ListTodo() {
                     <tr key={todo.todo_id}>
                         <th >{todo.description}</th>
                         <td><EditTodo todo={todo}/></td>
-                        <td><button onClick={() => deleteTodoHandler(todo.todo_id)} className="btn btn-danger">Delete</button></td>
+                        <td><button onClick={() => window.confirm("Are you sure to delete the todo") ? deleteTodoHandler(todo.todo_id) : null} className="btn btn-danger">Delete</button></td>
                     </tr>
                         )
                     })} 
-                    
                 </tbody>
             </table>
         </Fragment>
