@@ -45,7 +45,7 @@ export default function ListTodo() {
                         return(
                     <tr key={todo.todo_id}>
                         <th >{todo.description}</th>
-                        <td><button className="btn btn-primary"><EditTodo/></button></td>
+                        <td><EditTodo todo={todo}/></td>
                         <td><button onClick={() => deleteTodoHandler(todo.todo_id)} className="btn btn-danger">Delete</button></td>
                     </tr>
                         )
